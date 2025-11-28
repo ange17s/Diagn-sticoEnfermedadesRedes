@@ -107,7 +107,7 @@ Debes tener **Python 3.8 o superior** instalado.
 ### 2. Clonar el Repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/nombre-del-repositorio.git
+git clone https://github.com/ange17s/PronosticoEnvejecimiento.git
 cd nombre-del-repositorio
 
 ### 3. Se recomienta usar un entorno virtual
@@ -134,7 +134,10 @@ El entrenamiento del modelo requiere el dataset UTKFace. Este paso es obligatori
 Utiliza el comando de clonación para descargar el dataset:
 
 # COMANDO PARA CLONAR EL DATASET UTKFace
-git clone [https://github.com/UTKFace/UTKFace_Dataset.git](https://github.com/UTKFace/UTKFace_Dataset.git) data/UTKFace
+import kagglehub
+# Download latest version
+path = kagglehub.dataset_download("jangedoo/utkface-new")
+print("Path to dataset files:", path)
 
 
 Asegúrate de que la carpeta de datos se encuentre en la ruta esperada por preprocesamiento.py.
